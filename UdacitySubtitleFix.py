@@ -25,7 +25,7 @@ Aung Thiha
 mr.aungthiha@gmail.com
 https://www.twitter.com/AungThiha3
 https://www.linkedin.com/in/aung-thiha-a4990b106\n
-Press Any Key to exit.'''
+Press Enter/Return to exit.'''
 
 def main(filedir):
 	print ''

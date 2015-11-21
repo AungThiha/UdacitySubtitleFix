@@ -30,7 +30,7 @@ Press Enter/Return to exit.'''
 def main(filedir):
 	print ''
 	total = 0
-	for root, dirnames, filenames in os.walk('.'):
+	for root, dirnames, filenames in os.walk(filedir):
 	    for filename in fnmatch.filter(filenames, '*.srt'):
 	        with open(os.path.join(root, filename), 'r+') as f:
 	        	text = f.read()

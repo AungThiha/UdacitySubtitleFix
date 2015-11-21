@@ -20,6 +20,12 @@ import re
 patched = 'is patched'
 pat = r'(\d:\d\d:\d\d\.\d\d\d),(\d:\d\d:\d\d\.\d\d\d)'
 repl = r'\1 --> \2'
+addr = '''\n%s file/files in total.\n\n\
+Aung Thiha\n\
+mr.aungthiha@gmail.com\n\
+https://www.twitter.com/AungThiha3\n\
+https://www.linkedin.com/in/aung-thiha-a4990b106\n\n\
+Press Any Key to exit.'''
 
 
 def main(filedir):
@@ -33,7 +39,7 @@ def main(filedir):
 	        	f.write(text)
 	        print filename, patched
 	        total += 1
-	print '\n%s file/files in total.\n\nAung Thiha mr.aungthiha@gmail.com twitter.com/AungThiha3 Myanmar(Burma)\n\nPress Any Key to exit.' % total
+	print addr % total
 	raw_input()
 
 

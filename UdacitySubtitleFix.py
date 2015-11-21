@@ -32,10 +32,13 @@ def main(filedir):
 	total = 0
 	for root, dirnames, filenames in os.walk(filedir):
 	    for filename in fnmatch.filter(filenames, '*.srt'):
-	        with open(os.path.join(root, filename), 'r+') as f:
-	        	text = f.read()
-	        	text = re.sub(pat,repl, text)
-	        	f.write(text)
+	    	abs_path = os.path.join(root, filename)
+	    	f = open(abs_path, 'r')
+	    	text = re.sub(pat,repl, f.read())
+	    	f.close()
+	    	f = open(abs_path, 'w')
+	    	f.write(text)
+	    	f.close()
 	        print filename, patched
 	        total += 1
 	print addr % total
